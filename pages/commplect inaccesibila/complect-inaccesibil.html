@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu  Complect Inaccesibil</title>
+    <link rel="stylesheet" href="css/complect-inaccesibil.css?v=2" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><strong>A11y Pro - MOD DEFECT</strong></div>
+      <nav>
+        <ul>
+          <li><a href="complect-inaccesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" tabindex="-1">Resurse <span>▼</span></button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main" id="main-content">
+      <div class="titlu-pagina">
+        <h1>Bariere Invizibile de Navigare</h1>
+        <p>
+          Vizual, această pagină pare identică cu cea accesibilă. Totuși,
+          încearcă să o folosești doar cu tasta <strong>TAB</strong> sau cu un
+          <strong>Screen Reader</strong>. Vei observa că nu poți vedea unde este
+          focusul și că elementele nu mai comunică starea lor.
+        </p>
+      </div>
+
+      <section>
+        <p class="heading-secondary">Prețuri Servicii</p>
+        <table>
+          <tr>
+            <td class="fake-header">Serviciu</td>
+            <td class="fake-header">Durată</td>
+            <td class="fake-header" colspan="2">Preț</td>
+            
+          </tr>
+          <tr>
+            <td>Audit Accesibilitate</td>
+            <td>5 zile</td>
+            <td>1500</td>
+            <td>RON</td>
+          </tr>
+          <tr>
+            <td>Optimizare Imagini</td>
+            <td>2 zile</td>
+            <td>500</td>
+            <td>RON</td>
+          </tr>
+        </table>
+      </section>
+      <section>
+        <p class="heading-secondary">Echipa noastră</p>
+        <div class="image-grid">
+          <figure>
+            <img
+              src="../../programatori_in_scaun_rulant.jpg"
+              style="max-width: 100%; border-radius: 8px"
+            />
+          </figure>
+        </div>
+        Tehnologia ne unește, iar noi suntem dedicați să o facem accesibilă
+        tuturor. Această imagine ilustrează perfect cum oferirea unui mediu de
+        lucru adaptat, inclusiv a accesului facil la tehnologii asistive și a
+        unui design web inclusiv, ajută echipa noastră să colaboreze eficient și
+        să creeze soluții inovatoare împreună.
+      </section>
+      <section>
+        <p class="heading-secondary">Erori de navigare și bariere invizibile</p>
+        <ul>
+          <li>
+            <strong>Lipsa focusului vizual:</strong> Utilizatorul de tastatură
+            apasă TAB, dar nu știe unde se află "cursorul".
+          </li>
+          <li>
+            <strong>Elemente "Mute":</strong> Butoanele fără etichete
+            (aria-label) nu spun nimic unui Screen Reader.
+          </li>
+          <li>
+            <strong>Ordinea ilogică:</strong> Dacă ordinea de tabulare nu
+            respectă ordinea vizuală, utilizatorul devine confuz.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="heading-secondary">Moduri de Testare</p>
+        <div class="tabs-container">
+          <button class="tab-button" id="tab-manual" tabindex="-1">Testare Manuală</button>
+          <button class="tab-button" id="tab-auto" tabindex="-1">Testare Automatizată</button>
+        </div>
+
+      <div
+          id="panel-manual"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-manual"
+        >
+          <p class="heading-tertiary">Testare Manuală</p>
+          <p>
+            Testarea manuală implică utilizarea directă a site-ului tău cu
+            echipamente de asistență și metode de navigare pe care le folosesc
+            persoanele cu dizabilități.
+          </p>
+          <ol>
+            <li>
+              <strong>Navigare cu tastatura:</strong> Folosește TAB și SHIFT+TAB
+              pentru a verifica ordinea focusului.
+            </li>
+            <li>
+              <strong>Screen Readers:</strong> NVDA (gratuit), JAWS, sau
+              VoiceOver (Mac).
+            </li>
+            <li>
+              <strong>Zoom:</strong> Testează cu zoom la 200% și cu mod
+              întunecat.
+            </li>
+          </ol>
+          <p>
+           <span 
+              class="fake-link" 
+              onclick="location.href='testare_manuala.html';">
+              Afișează ghidul complet de testare manuală 
+            <span>→</span>
+</span>
+          </p>
+        </div>
+
+        <div
+          id="panel-auto"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-auto"
+          aria-hidden="true"
+        >
+          <p class="heading-tertiary">Testare Automatizată</p>
+          <p>
+            Instrumentele automate analizează codul și structura paginii pentru
+            a identifica probleme comune de accesibilitate. Sunt rapide și
+            utile, dar nu înlocuiesc testarea manuală.
+          </p>
+          <ol>
+            <li>
+              <strong>AXE DevTools:</strong> Extensie pentru Chrome/Firefox cu
+              rapoarte detaliate.
+            </li>
+            <li>
+              <strong>WAVE:</strong> WebAIM's tool pentru verificări vizuale și
+              rapoarte.
+            </li>
+            <li>
+              <strong>Lighthouse:</strong> Integrat în Chrome DevTools, include
+              audit accesibilitate.
+            </li>
+            <li>
+              <strong>Constrat Cheker:</strong> Un tool facut de echipa noastră
+              pentru verificarea contrastului
+            </li>
+          </ol>
+          <p>
+            Folosind aceste instrumente în combinație cu testarea manuală, vei
+            asigura că site-ul tău este cu adevărat accesibil pentru toți
+            utilizatorii.
+          </p>
+          <p>
+            <span 
+              class="fake-link" 
+              onclick="location.href='testare_automata.html';">
+              Afișează ghidul complet de testare automată 
+            <span>→</span>
+          </p>
+      </section>
+
+      <section class="newsletter-section">
+        <p class="heading-secondary">Newsletter</p>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="text" placeholder="Adresa de e-mail" />
+          </div>
+          <button type="submit" class="btn-submit">Mă abonez</button>
+        </form>
+      </section>
+
+      <section>
+        <p class="heading-secondary">Interacțiuni Defecte</p>
+        <p>
+          Un pop-up (modal) defect nu poate fi controlat în totalitate de la
+          tastatură.
+        </p>
+        <button id="openModal" class="btn-submit">
+          Deschide Modalul Problematic
+        </button>
+      </section>
+
+      <div id="modalOverlay" class="modal-overlay">
+        <div class="modal-content">
+          <button id="closeModal" class="close-icon">×</button>
+          <p class="heading-secondary">Setări Notificări</p>
+          <p>Alege ce tip de noutăți dorești să primești:</p>
+
+
+           <div class="fake-fieldset" style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+  <div class="fake-legend" style="font-weight: bold; color: var(--primary-color); margin-bottom: 15px;">
+    Preferințe (Varianta Custom Inaccesibilă):
+  </div>
+
+  <div class="custom-option" onclick="toggleFakeCheckbox(this)">
+    <div class="custom-checkbox-visual"></div>
+    <span class="custom-label-text">Noutăți săptămânale</span>
+  </div>
+
+  <div class="custom-option" onclick="toggleFakeCheckbox(this)">
+    <div class="custom-checkbox-visual"></div>
+    <span class="custom-label-text">Evenimente A11y</span>
+  </div>
+
+  <div class="custom-option" onclick="toggleFakeCheckbox(this)">
+    <div class="custom-checkbox-visual"></div>
+    <span class="custom-label-text">Oferte parteneri</span>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-container">
+        <span>&copy; 2026 - Proiect de conștientizare A11y.</span>
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+      </div>
+    </div>
+
+    <script src="js/complect-inaccesibil.js"></script>
+  </body>
+</html>

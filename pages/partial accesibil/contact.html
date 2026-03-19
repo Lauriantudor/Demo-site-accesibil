@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu Partial Inaccesibil</title>
+    <link rel="stylesheet" href="css/partial-inaccesibil.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><strong>A11y Pro - MOD DEFECT</strong></div>
+      <nav>
+        <ul>
+          <li><a href="partial-inaccesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">
+              Resurse
+              <span>▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="main" id="main-content">
+      <div class="titlu-pagina">
+        <h1>Formular de Contact</h1>
+        <p>Avem plăcere să-ți răspundem la orice întrebare sau sugestie.</p>
+      </div>
+
+      <section class="contact-form-section">
+        <form action="#" method="POST">
+          <!-- NUME -->
+          <div class="form-group">
+            <label> Nume <span>*</span> </label>
+            <input
+              type="text"
+              id="nume"
+              name="nume"
+              placeholder="Introdu-ți numele"
+            />
+          </div>
+
+          <!-- PRENUME -->
+          <div class="form-group">
+            <label>Prenume <span>*</span></label>
+            <input
+              type="text"
+              id="prenume"
+              name="prenume"
+              placeholder="Introdu-ți prenumele"
+            />
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <label> Email <span>*</span> </label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="exemplu@mail.ro"
+            />
+          </div>
+          <small id="email-help" style="color: #666">
+            Doar pentru a te contacta cu răspunsul.
+          </small>
+
+          <!-- MESAJ -->
+          <div class="form-group">
+            <label> Mesaj </label>
+
+            <textarea
+              id="mesaj"
+              name="mesaj"
+              rows="5"
+              placeholder="Scrie-ți mesajul aici..."
+            ></textarea>
+            <small id="mesaj-help" style="color: #666">
+              Te rugăm să fii cât mai detaliat posibil.
+            </small>
+          </div>
+
+          <!-- BUTON TRIMITE -->
+          <button type="submit" class="btn-submit">Trimite Mesajul</button>
+        </form>
+      </section>
+    </div>
+    <div class="footer">
+      <div class="footer-container" role="contentinfo">
+        <span class="footer-info">
+          <span>&copy;</span> 2026 - Proiect de conștientizare A11y.
+        </span>
+
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+      </div>
+    </div>
+    <script src="js/partial-inaccesibil.js"></script>
+  </body>
+</html>

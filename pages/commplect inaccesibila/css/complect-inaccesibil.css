@@ -1,0 +1,590 @@
+:root {
+  /* MODIFICAT: Albastru deschis pentru titluri și elemente primare */
+  --primary-color: #4a90e2;
+  /* MODIFICAT: Gri deschis pentru textul general */
+  --text-color: #757575;
+  --bg-color: #ffffff;
+  --focus-outline: #4a90e2;
+}
+
+/* MODIFICARE: Forțăm browserul să calculeze înălțimea totală */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* MODIFICARE: Body devine container Flex vertical */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #f8f9fa;
+  border-bottom: 3px solid var(--primary-color);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  position: relative;
+  margin-left: 20px;
+}
+
+nav a,
+.dropbtn {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  border: 2px solid transparent;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  line-height: inherit;
+  margin: 0;
+}
+
+nav a:focus,
+.dropbtn:focus {
+  outline: none;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+.dropdown-content a {
+  color: #555; /* Adaptat la gri */
+  font-weight: normal;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.main {
+  padding: 4rem 10%;
+  max-width: 800px;
+  margin: 0 auto;
+  flex: 1 0 auto;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+
+.heading-secondary {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+}
+
+.heading-tertiary {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--text-color); /* Forțare gri deschis */
+}
+
+.footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  pointer-events: none;
+}
+
+.footer-link {
+  color: #a0eaff; /* Ajustat pentru a se potrivi cu noul albastru */
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.footer-link:focus {
+  outline: none;
+  background-color: transparent;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+th,
+td {
+  border: 1px solid #ddd; /* Schimbat din negru în gri pentru aspect modern */
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tabs-container {
+  display: flex;
+  border-bottom: 2px solid #eee;
+  margin: 2rem 0 1rem 0;
+  gap: 10px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-button:hover {
+  color: var(--primary-color);
+  background-color: #f5f5f5;
+}
+
+.tab-button[aria-selected="true"] {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab-panel .heading-tertiary {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.newsletter-section {
+  background-color: #f0f7f9;
+  padding: 3rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* --- Stiluri specifice pentru Pagini de Ghid/Documentație --- */
+
+.titlu-pagina {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #e3f2fd; /* Varianta foarte deschisă a albastrului ales */
+}
+
+.titlu-pagina h1 {
+  color: var(--primary-color);
+}
+
+.ghid-section {
+  margin: 30px 0;
+  padding: 25px;
+  background-color: #ffffff;
+  border-left: 6px solid var(--primary-color);
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ghid-section .heading-secondary {
+  color: var(--primary-color);
+}
+
+.faq-question {
+  color: var(--primary-color);
+}
+
+.fake-link {
+  color: var(--primary-color);
+}
+
+.custom-checkbox-visual {
+  border: 2px solid var(--primary-color);
+}
+
+.custom-option.is-checked .custom-checkbox-visual {
+  background-color: var(--primary-color);
+}
+
+/* Am păstrat toți selectorii existenți pentru a asigura continuitatea codului tău original */
+/* --- FAQ ACORDEON REPARAT --- */
+
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--primary-color); /* Folosește albastrul tău deschis */
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+/* --- STARE INIȚIALĂ: Sabotaj Screen Reader (Cazul 2) --- */
+/* --- REPARARE: Sabotajul se aplică DOAR în interiorul FAQ --- */
+.faq-item .faq-answer {
+  display: block !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* --- REPARARE: Afișare la click doar pentru FAQ --- */
+.faq-item .faq-answer.is-visible-now {
+  height: auto !important;
+  width: auto !important;
+  clip-path: none !important;
+  white-space: normal !important;
+  padding: 20px !important;
+  border-top: 1px solid #eee !important;
+  background: #fafbfc !important;
+}
+
+.faq-question:focus {
+  outline: none;
+  border-left: none;
+  background-color: transparent;
+  padding-left: 20px;
+}
+
+*:focus,
+*:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.faq-question.is-active .icon {
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+/* ==========================================
+   BLOCK DE SABOTAJ (ADĂUGAT LA FINAL)
+   ========================================== */
+
+/* Dezactivăm complet flexibilitatea pe mobil și la Zoom 200% */
+body {
+  min-width: 1200px !important;
+  overflow-x: scroll !important;
+  color: var(--text-color) !important;
+}
+
+/* Forțăm titlurile să rămână pe albastrul nou peste tot */
+h1,
+.heading-secondary,
+.heading-tertiary,
+.faq-question,
+.fake-link {
+  color: var(--primary-color) !important;
+}
+
+/* Stricăm așezarea elementelor: nu mai au voie să se pună unul sub altul */
+.header,
+.footer-container,
+nav ul,
+.tabs-container {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+}
+
+/* La zoom 200%, conținutul va fi tăiat pentru că fixăm înălțimea */
+.ghid-section,
+.faq-item,
+.newsletter-section {
+  height: auto !important; /* Lasă-l să crească cât e nevoie */
+  min-height: unset !important;
+  overflow: visible !important;
+}
+
+/* Facem tabelele să iasă din ecran */
+table {
+  width: 1200px !important;
+  display: block !important;
+}
+
+/* Dezactivăm orice cod anterior care încerca să facă pagina "bună" pe mobil */
+@media screen and (max-width: 900px) {
+  * {
+    width: 1200px !important;
+    float: none !important;
+  }
+}
+/* --- MODAL POP-UP REPARAT --- */
+
+/* Fundalul modalului */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  /* REPARARE: Folosim display: none pentru a-l ascunde corect */
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Clasa care se adaugă prin JavaScript pentru a deschide pop-up-ul */
+.modal-overlay.is-open {
+  display: flex !important;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  /* Ne asigurăm că textul din interior e lizibil */
+  color: var(--text-color);
+}
+
+/* REPARARE CHECKBOXURI DIN POP-UP */
+.checkbox-group {
+  margin-bottom: 12px;
+  /* Resetăm sabotajul de 1px */
+  display: flex !important;
+  height: auto !important;
+  width: auto !important;
+  clip-path: none !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  /* Resetăm sabotajul și aici */
+  opacity: 1 !important;
+  position: static !important;
+}
+
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #cc0000;
+  cursor: pointer;
+  line-height: 1;
+}
+/* Containerul pentru fiecare opțiune */
+.custom-option {
+  display: flex !important;
+  align-items: center;
+  padding: 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  border: 1px solid #e0e0e0; /* O bordură fină în loc de liniile acelea mari */
+  border-radius: 6px;
+  transition: background 0.2s;
+  /* Reset sabotaj anterior */
+  height: auto !important;
+  width: auto !important;
+  clip-path: none !important;
+  overflow: visible !important;
+}
+
+.custom-option:hover {
+  background-color: #f0f7f9;
+}
+
+/* Pătrățelul vizual (Checkbox-ul propriu-zis) */
+.custom-checkbox-visual {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--primary-color); /* Albastrul tău deschis */
+  border-radius: 4px;
+  margin-right: 15px;
+  position: relative;
+  background: white;
+  flex-shrink: 0; /* Previne turtirea pătratului */
+}
+
+/* Bifă (Checkmark) - ascunsă implicit */
+.custom-checkbox-visual::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  display: none;
+}
+
+/* Când opțiunea este selectată (clasa adăugată din JS) */
+.custom-option.is-checked .custom-checkbox-visual {
+  background-color: var(--primary-color);
+}
+
+.custom-option.is-checked .custom-checkbox-visual::after {
+  display: block;
+}
+
+/* Textul opțiunii */
+.custom-label-text {
+  font-size: 1rem;
+  color: var(--text-color); /* Griul tău deschis */
+  font-weight: 500;
+}
+/* TABURI: Aspect corect, dar cod "Așa NU" */
+.tabs-container {
+  display: flex;
+  border-bottom: 2px solid #6b6565;
+  margin: 2rem 0 0 0;
+  gap: 20px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 10px 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  /* SABOTAJ: Eliminăm focusul vizual */
+  outline: none !important;
+}
+
+/* Arată care e activ, dar DOAR vizual */
+.tab-button.active-style {
+  border-bottom: 3px solid #1a5f7a;
+  color: #1a5f7a;
+}
+
+/* PROBLEMĂ: Ambele panouri apar la început dacă nu pui display: none */
+/* Am rezolvat problema vizuală inițială conform cerințelor */
+.tab-panel {
+  display: none;
+  padding: 20px 0;
+}
+
+#panel-manual {
+  display: block;
+}
+
+/* SABOTAJ: Folosim opacity în loc de display:none */
+/* Asta înseamnă că cititorul de ecran vede ambele texte deodată, chiar dacă ochiul vede doar unul */
+.tab-panel.hidden-but-there {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+/* Verifică să nu ai ceva de genul acesta care forțează spațiul: */
+.answer {
+  display: none; /* Răspunsul trebuie să fie complet ascuns */
+  border: none; /* Scoate orice bordură */
+  padding: 0; /* Scoate spațiul interior */
+}
+
+/* Doar când este deschis (ex: clasă adăugată cu JS) */
+.answer.active {
+  display: block;
+  padding: 15px;
+  border: 1px solid #ddd; /* Dacă vrei bordura doar la textul deschis */
+}

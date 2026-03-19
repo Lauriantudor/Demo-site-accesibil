@@ -1,0 +1,581 @@
+:root {
+  --primary-color: #1a5f7a;
+  --text-color: #222;
+  --bg-color: #ffffff;
+  --focus-outline: #ff8c00;
+}
+
+/* MODIFICARE: Forțăm browserul să calculeze înălțimea totală */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* MODIFICARE: Body devine container Flex vertical */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+header {
+  background: #f8f9fa;
+  border-bottom: 3px solid var(--primary-color);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  position: relative;
+  margin-left: 20px;
+}
+
+nav a,
+.dropbtn {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 10px;
+  display: block;
+  border: 2px solid transparent;
+
+  /* ADĂUGĂ ACESTE LINII PENTRU RESETARE */
+  background: none; /* Scoate fundalul gri */
+  font-family: inherit; /* Forțează fontul să fie același cu restul paginii */
+  font-size: inherit; /* Forțează mărimea fontului */
+  cursor: pointer; /* Pune iconița de mână la hover ca la link-uri */
+  line-height: inherit; /* Aliniere verticală egală */
+  margin: 0; /* Scoate marginile implicite de buton */
+}
+
+nav a:focus,
+.dropbtn:focus {
+  outline: 3px solid var(--focus-outline);
+  background-color: #f0f7f9;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 1px solid #ccc;
+}
+.dropdown-content a {
+  color: #333;
+  font-weight: normal;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* MODIFICARE: Main va "împinge" footer-ul în jos ocupând tot spațiul liber */
+main {
+  padding: 4rem 10%;
+  max-width: 800px;
+  margin: 0 auto;
+  flex: 1 0 auto; /* Aceasta este linia magică pentru footer */
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* FOOTER: Rămâne la bază */
+footer {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; /* Centrează tot conținutul */
+  align-items: center;
+  gap: 15px; /* Creează un spațiu fizic între ele, nu doar un spațiu de tastatură */
+  flex-wrap: wrap;
+}
+
+.footer-info {
+  /* Ne asigurăm că acest span nu este interactiv */
+  pointer-events: none;
+}
+
+.footer-link {
+  color: #00ff88;
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  /* Un mic truc: îi dăm un rol clar de link */
+  display: inline-block;
+}
+
+.footer-link:focus {
+  outline: 3px solid var(--focus-outline);
+  background-color: rgba(26, 95, 122, 0.1);
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+th,
+td {
+  border: 1px solid #000000;
+  padding: 12px;
+  text-align: left;
+}
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+/* TABURI */
+.tabs-container {
+  display: flex;
+  border-bottom: 2px solid #6b6565;
+  margin: 2rem 0 1rem 0;
+  gap: 10px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tab-button:hover {
+  color: var(--primary-color);
+  background-color: #f5f5f5;
+}
+
+.tab-button:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+  color: var(--primary-color);
+  background-color: #f0f7f9;
+  border-radius: 4px;
+}
+
+.tab-button[aria-selected="true"] {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.tab-panel {
+  animation: fadeIn 0.3s ease;
+  padding: 1rem 0;
+}
+
+.tab-panel[aria-hidden="true"] {
+  display: none;
+}
+.tab-panel h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+.tab-panel ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.tab-panel li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.newsletter-section {
+  background-color: #f0f7f9;
+  padding: 3rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 300px;
+  margin: 0 auto 1rem auto;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: 3px solid var(--focus-outline);
+  border-color: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+.btn-submit {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-submit:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+
+/* CONTACT FORM SECTION */
+.contact-form-section {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.contact-form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-section .form-group {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+.contact-form-section .form-group input,
+.contact-form-section .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid var(--primary-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.contact-form-section .form-group input:focus,
+.contact-form-section .form-group textarea:focus {
+  outline: 3px solid var(--focus-outline);
+  border-color: var(--focus-outline);
+}
+
+.contact-form-section .form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form-section .form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  order: 1;
+}
+
+.contact-form-section .form-group small {
+  order: 3;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 0.25rem;
+}
+
+.contact-form-section .form-group input,
+.contact-form-section .form-group textarea {
+  order: 2;
+}
+
+.contact-form-section .btn-submit {
+  margin-top: 1rem;
+  padding: 15px 30px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Stil pentru butonul de deschidere (folusește variabila ta de culoare) */
+.btn-submit {
+  background-color: #1a5f7a;
+  color: white;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Fundalul modalului - ocupă tot ecranul */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Overlay negru transparent */
+  display: none; /* Ascuns implicit */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Caseta albă din mijloc */
+/* MODIFICARE: Adăugăm 'position: relative' pentru a servi drept reper pentru 'X' */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative; /* Esențial pentru poziționarea absolută a 'X'-ului */
+}
+
+/* NOU STIL: Poziționarea și aspectul iconiței 'X' */
+.close-icon {
+  position: absolute;
+  top: 10px; /* Distanța de sus */
+  right: 15px; /* Distanța de la dreapta */
+  background: none; /* Fără fundal */
+  border: none; /* Fără bordură implicită */
+  font-size: 2.5rem; /* Mărime mare a fontului */
+  font-weight: bold;
+  color: #cc0000; /* Culoare roșie */
+  cursor: pointer;
+  line-height: 1; /* Aliniere verticală corectă a caracterului × */
+  padding: 0;
+  transition: color 0.2s; /* Efect de tranziție la hover */
+}
+
+/* Efect vizual la trecerea mouse-ului peste 'X' */
+.close-icon:hover {
+  color: #ff0000; /* Devine mai deschis */
+}
+
+/* Starea de Focus (pentru tastatură) - Esențială A11y! */
+.close-icon:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.btn-close:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+.checkbox-group {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.checkbox-group label {
+  font-size: 1.1rem;
+  cursor: pointer; /* Face ca și textul să fie interactiv */
+}
+
+/* Stare de focus pentru checkbox (important pentru tastatură) */
+.checkbox-group input[type="checkbox"]:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+}
+/* --- Stiluri specifice pentru Pagini de Ghid/Documentație --- */
+
+.titlu-pagina {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #c6e6ee;
+}
+
+.titlu-pagina h1 {
+  font-size: 2.2rem;
+  color: #1a5f7a; /* Sau culoarea ta principală */
+}
+
+.ghid-section {
+  margin: 30px 0;
+  padding: 25px;
+  background-color: #ffffff;
+  border-left: 6px solid #1a5f7a;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.ghid-section h2 {
+  margin-top: 0;
+  color: #1a5f7a;
+  font-size: 1.5rem;
+}
+
+.ghid-section ul {
+  padding-left: 20px;
+}
+
+.ghid-section li {
+  margin-bottom: 15px;
+}
+
+/* Stil pentru elementele <code> (taste, comenzi) */
+code {
+  background: #eef2f3;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #d63384;
+}
+
+/* Zona de butoane/acțiuni la final de pagină */
+.actions {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: left;
+}
+
+/* Focus style pentru link-uri de navigare în ghiduri și în footer */
+.btn-back {
+  display: inline-block;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.btn-back:focus {
+  outline: 3px solid var(--focus-outline);
+  outline-offset: 2px;
+  background-color: #f0f7f9;
+  border-radius: 4px;
+}
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Creează spațiu între întrebări */
+}
+
+.faq-item {
+  border: 1px solid #d1d9e0;
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden; /* Asigură că fundalul nu iese din margini */
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1a5f7a;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.faq-question:focus {
+  outline: none;
+  border-left: 4px solid var(--focus-outline);
+  background-color: #f0f7f9;
+  padding-left: calc(20px - 4px);
+}
+
+.faq-answer {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease-out,
+    padding 0.3s ease;
+  background: #fdfdfd;
+}
+
+/* Clasa activă controlată de JS */
+.faq-answer.is-open {
+  max-height: 500px;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  border-left: 4px solid var(--focus-outline);
+  background: #fafbfc;
+}
+
+.faq-question.is-active .icon {
+  transform: rotate(45deg);
+}

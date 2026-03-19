@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu Accesibil - Așa DA</title>
+    <link rel="stylesheet" href="css/accesibil.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Sari la conținutul principal</a>
+
+    <header>
+      <div class="logo"><strong>A11y Pro</strong></div>
+      <nav aria-label="Meniu Principal">
+        <ul>
+          <li><a href="accesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+              Resurse
+              <span aria-hidden="true">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <div class="titlu-pagina">
+        <h1>Formular de Contact</h1>
+        <p>Avem plăcere să-ți răspundem la orice întrebare sau sugestie.</p>
+      </div>
+
+      <section class="contact-form-section">
+        <form action="#" method="POST" aria-labelledby="contact-form-title">
+          <!-- NUME -->
+          <div class="form-group">
+            <label for="nume"> Nume <span aria-hidden="true">*</span> </label>
+            <input
+              type="text"
+              id="nume"
+              name="nume"
+              required
+              aria-required="true"
+              placeholder="Introdu-ți numele"
+            />
+          </div>
+
+          <!-- PRENUME -->
+          <div class="form-group">
+            <label for="prenume">
+              Prenume <span aria-hidden="true">*</span>
+            </label>
+            <input
+              type="text"
+              id="prenume"
+              name="prenume"
+              required
+              aria-required="true"
+              placeholder="Introdu-ți prenumele"
+            />
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+            <label for="email"> Email <span aria-hidden="true">*</span> </label>
+            <small id="email-help" style="color: #2481a8; font-weight: 700">
+              Doar pentru a te contacta cu răspunsul.
+            </small>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              aria-required="true"
+              placeholder="exemplu@mail.ro"
+              aria-describedby="email-help"
+            />
+          </div>
+
+          <!-- MESAJ -->
+          <div class="form-group">
+            <label for="mesaj"> Mesaj </label>
+            <small id="mesaj-help" style="color: #2481a8; font-weight: 700">
+              Te rugăm să fii cât mai detaliat posibil.
+            </small>
+            <textarea
+              id="mesaj"
+              name="mesaj"
+              rows="5"
+              placeholder="Scrie-ți mesajul aici..."
+              aria-describedby="mesaj-help"
+            ></textarea>
+          </div>
+
+          <!-- BUTON TRIMITE -->
+          <button type="submit" class="btn-submit">Trimite Mesajul</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container" role="contentinfo">
+        <span class="footer-info">
+          <span aria-hidden="true">&copy;</span> 2026 - Proiect de
+          conștientizare A11y.
+        </span>
+
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+      </div>
+    </footer>
+    <script src="js/accesibil.js"></script>
+  </body>
+</html>

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu Accesibil - Așa DA</title>
+    <link rel="stylesheet" href="css/accesibil.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Sari la conținutul principal</a>
+
+    <header>
+      <div class="logo"><strong>A11y Pro</strong></div>
+      <nav aria-label="Meniu Principal">
+        <ul>
+          <li><a href="accesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+              Resurse
+              <span aria-hidden="true">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <div class="titlu-pagina-fundal">
+        <h1>Întrebări Frecvente despre Accesibilitate</h1>
+        <p class="intro">
+          Aflați răspunsurile la cele mai comune curiozități legate de
+          standardele WCAG și implementarea A11y.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-1"
+            id="faq-que-1"
+          >
+            Ce înseamnă mai exact "A11y"?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-1"
+            role="region"
+            aria-labelledby="faq-que-1"
+            aria-hidden="true"
+          >
+            <p>
+              A11y este un numeronym pentru cuvântul "Accessibility". Cifra 11
+              reprezintă numărul de litere dintre prima literă (A) și ultima
+              literă (y).
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-2"
+            id="faq-que-2"
+          >
+            Cine beneficiază de un site accesibil?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-2"
+            role="region"
+            aria-labelledby="faq-que-2"
+            aria-hidden="true"
+          >
+            <p>
+              Toată lumea! Deși este vital pentru persoanele cu dizabilități
+              vizuale, auditive sau motorii, un site accesibil este mai ușor de
+              folosit și pentru persoanele în vârstă sau cei care folosesc
+              dispozitive mobile în soare puternic.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-3"
+            id="faq-que-3"
+          >
+            Este accesibilitatea obligatorie prin lege?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-3"
+            role="region"
+            aria-labelledby="faq-que-3"
+            aria-hidden="true"
+          >
+            <p>
+              Da, în Uniunea Europeană, Directiva privind accesibilitatea web și
+              Actul European privind Accesibilitatea impun standarde stricte
+              pentru instituțiile publice și multe companii private.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-4"
+            id="faq-que-4"
+          >
+            Ce este contrastul de culoare minim recomandat?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-4"
+            role="region"
+            aria-labelledby="faq-que-4"
+            aria-hidden="true"
+          >
+            <p>
+              Conform WCAG 2.1 AA, raportul de contrast trebuie să fie de cel
+              puțin 4.5:1 pentru textul normal și 3:1 pentru textul mare.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-5"
+            id="faq-que-5"
+          >
+            Pot automatiza complet testarea accesibilității?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-5"
+            role="region"
+            aria-labelledby="faq-que-5"
+            aria-hidden="true"
+          >
+            <p>
+              Nu. Uneltele automate pot detecta doar aproximativ 30-40% din
+              probleme. Testarea manuală cu tastatura și cititorul de ecran este
+              indispensabilă.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-6"
+            id="faq-que-6"
+          >
+            De ce nu este bine să folosim "Click aici" ca text pentru link-uri?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-6"
+            role="region"
+            aria-labelledby="faq-que-6"
+            aria-hidden="true"
+          >
+            <p>
+              Utilizatorii de cititoare de ecran navighează adesea folosind o
+              listă de link-uri. "Click aici" nu oferă niciun context despre
+              destinația link-ului.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-7"
+            id="faq-que-7"
+          >
+            Ce este textul alternativ (Alt Text)?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-7"
+            role="region"
+            aria-labelledby="faq-que-7"
+            aria-hidden="true"
+          >
+            <p>
+              Este o descriere textuală a unei imagini, citită de software-ul de
+              asistență pentru a explica utilizatorului nevăzător ce reprezintă
+              imaginea respectivă.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-8"
+            id="faq-que-8"
+          >
+            Cum ajută structura de titluri (H1-H6)?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-8"
+            role="region"
+            aria-labelledby="faq-que-8"
+            aria-hidden="true"
+          >
+            <p>
+              Titlurile corecte creează o hartă a paginii. Utilizatorii de
+              cititoare de ecran pot sări rapid de la o secțiune la alta
+              folosind tastele rapide pentru titluri.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-9"
+            id="faq-que-9"
+          >
+            Ce este un "Skip Link"?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-9"
+            role="region"
+            aria-labelledby="faq-que-9"
+            aria-hidden="true"
+          >
+            <p>
+              Este un link ascuns vizual, dar accesibil prin tastatură, care
+              permite utilizatorului să sară peste meniul repetitiv de navigare
+              direct la conținutul principal.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button
+            class="faq-question"
+            aria-expanded="false"
+            aria-controls="faq-ans-10"
+            id="faq-que-10"
+          >
+            Accesibilitatea strică designul site-ului?
+            <span class="icon" aria-hidden="true">+</span>
+          </button>
+          <div
+            class="faq-answer"
+            id="faq-ans-10"
+            role="region"
+            aria-labelledby="faq-que-10"
+            aria-hidden="true"
+          >
+            <p>
+              Absolut nu. Un design accesibil este un design curat, logic și
+              modern. Accesibilitatea și estetica merg mână în mână.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="accesibil.html" class="btn-back">
+          <span aria-hidden="true">←</span> Înapoi la pagina principală
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container" role="contentinfo">
+        <span class="footer-info">
+          <span aria-hidden="true">&copy;</span> 2026 - Proiect de
+          conștientizare A11y.
+        </span>
+
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+      </div>
+    </footer>
+    <script src="js/accesibil.js"></script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu Accesibil - Așa DA</title>
+    <link rel="stylesheet" href="css/accesibil.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Sari la conținutul principal</a>
+
+    <header>
+      <div class="logo"><strong>A11y Pro</strong></div>
+      <nav aria-label="Meniu Principal">
+        <ul>
+          <li><a href="accesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+              Resurse
+              <span aria-hidden="true">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content">
+      <div class="titlu-pagina-fundal">
+        <h1>Ghid Complet de Testare Automatizată</h1>
+        <p class="intro">
+          Instrumentele automate analizează rapid codul și structura paginii
+          pentru a identifica problemele comune de accesibilitate. Deși nu
+          înlocuiesc testarea manuală, ele sunt primul pas esențial către
+          conformitate.
+        </p>
+      </div>
+
+      <section aria-labelledby="axe-title" class="ghid-section">
+        <h2 id="axe-title">1. AXE DevTools</h2>
+        <p>
+          Este considerat standardul industriei pentru testarea automată a
+          accesibilității, fiind bazat pe motorul axe-core.
+        </p>
+        <ol>
+          <li>
+            <strong>Extensie Browser:</strong> O poți instala în Chrome sau
+            Firefox pentru a rula scanări instantanee.
+          </li>
+          <li>
+            <strong>Rapoarte Detaliate:</strong> Identifică precis elementul din
+            DOM care causăză eroarea și oferă soluția de remediere.
+          </li>
+          <li>
+            <strong>Fără erori false:</strong> Axe este recunoscut pentru faptul
+            că nu raportează "false positives", oferind doar erori sigure.
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="wave-title" class="ghid-section">
+        <h2 id="wave-title">2. WAVE (Web Accessibility Evaluation Tool)</h2>
+        <p>
+          O unealtă vizuală oferită de WebAIM care te ajută să vezi problemele
+          direct în contextul paginii.
+        </p>
+        <ol>
+          <li>
+            <strong>Indicatori vizuali:</strong> Pune pictograme peste
+            elementele cu probleme (ex: lipsă Alt text sau contrast slab).
+          </li>
+          <li>
+            <strong>Analiza structurii:</strong> Îi arătă clar ierarhia
+            titlurilor (H1, H2, H3) pentru a vedea dacă este logică.
+          </li>
+          <li>
+            <strong>Contrast Checker:</strong> Include o unealtă de verificare a
+            culorilor foarte ușor de folosit.
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="lighthouse-title" class="ghid-section">
+        <h2 id="lighthouse-title">3. Google Lighthouse</h2>
+        <p>
+          Integrat direct în Google Chrome, Lighthouse oferă un audit
+          automatizat complet.
+        </p>
+        <ol>
+          <li>
+            <strong>Scor de Accesibilitate:</strong> Generează o notă de la 0 la
+            100 bazată pe o serie de verificări automate.
+          </li>
+          <li>
+            <strong>Verificare Atribute ARIA:</strong> Analizează dacă rolurile
+            și atributele ARIA sunt folosite corect în cod.
+          </li>
+          <li>
+            <strong>Ușurință:</strong> Nu necesită instalare; deschizi DevTools
+            (F12) și alegi tab-ul Lighthouse.
+          </li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="contrast-title" class="ghid-section">
+        <h2 id="contrast-title">4. Contrast Checker (Tool-ul nostru)</h2>
+        <p>
+          Un instrument dedicat verificării lizibilității textului față de
+          fundal.
+        </p>
+        <ol>
+          <li>
+            <strong>Raport WCAG:</strong> Verifică dacă textul tău atinge
+            raportul minim de 4.5:1 pentru text normal.
+          </li>
+          <li>
+            <strong>Verificare Stări:</strong> Testează contrastul nu doar
+            pentru text, ci și pentru borduri sau iconite.
+          </li>
+        </ol>
+      </section>
+
+      <div class="actions">
+        <a href="accesibil.html" class="btn-back">
+          <span aria-hidden="true">←</span> Înapoi la pagina principală
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-container" role="contentinfo">
+        <span class="footer-info">
+          <span aria-hidden="true">&copy;</span> 2026 - Proiect de
+          conștientizare A11y.
+        </span>
+
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+      </div>
+    </footer>
+  </body>
+
+  <script src="js/accesibil.js"></script>
+</html>

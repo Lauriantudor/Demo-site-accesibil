@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu Accesibil - Așa DA</title>
+    <link rel="stylesheet" href="css/accesibil.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Sari la conținutul principal</a>
+
+    <header>
+      <div class="logo"><strong>A11y Pro</strong></div>
+      <nav aria-label="Meniu Principal">
+        <ul>
+          <li><a href="accesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+              Resurse 
+              <span aria-hidden="true">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <div class="titlu-pagina">
+        <h1>Standardul de Aur în Accesibilitate</h1>
+      <p>
+        Această pagină respectă principiile fundamentale ale web-ului accesibil.
+        Observă cum poți folosi tasta <strong>TAB</strong> pentru a naviga prin
+        meniu, cum contrastul culorilor este puternic și cum structura este
+        clară și ușor de urmărit chiar și cu un cititor de ecran (Screen
+        Reader).
+      </p>
+      </div>
+      <section>
+        <h2>Prețuri Servicii</h2>
+        <table>
+          <caption>
+            Lista prețurilor actualizate conform standardelor A11y
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Serviciu</th>
+              <th scope="col">Durată</th>
+              <th scope="col">Preț</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Audit Accesibilitate</td>
+              <td>5 zile</td>
+              <td>1500 RON</td>
+            </tr>
+            <tr>
+              <td>Optimizare Imagini</td>
+              <td>2 zile</td>
+              <td>500 RON</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section>
+        <h2>De ce contează accesibilitatea?</h2>
+        <ol>
+          <li>Îmbunătățește experiența tuturor utilizatorilor.</li>
+          <li>Ajută la indexarea SEO mai bună.</li>
+          <li>Este o obligație legală în multe domenii.</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Echipa noastră</h2>
+        <div class="image-grid">
+          <figure>
+            <img
+              src="../../programatori_in_scaun_rulant.jpg"
+              alt="Echipa noastră din București lucrând la un birou cu monitoare mari"
+              style="max-width: 100%; border-radius: 8px"
+            />
+            <figcaption>Echipa noastră la biroul din București</figcaption>
+          </figure>
+        </div>
+        Tehnologia ne unește, iar noi suntem dedicați să o facem accesibilă
+        tuturor. Această imagine ilustrează perfect cum oferirea unui mediu de
+        lucru adaptat, inclusiv a accesului facil la tehnologii asistive și a
+        unui design web inclusiv, ajută echipa noastră să colaboreze eficient și
+        să creeze soluții inovatoare împreună.
+      </section>
+      <section>
+        <h2>Moduri de Testare Accesibilitate</h2>
+        <div
+          class="tabs-container"
+          role="tablist"
+          aria-label="Moduri de testare"
+        >
+          <button
+            class="tab-button"
+            id="tab-manual"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-manual"
+          >
+            Testare Manuală
+          </button>
+          <button
+            class="tab-button"
+            id="tab-auto"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-auto"
+          >
+            Testare Automatizată
+          </button>
+        </div>
+
+        <div
+          id="panel-manual"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-manual"
+        >
+          <h3>Testare Manuală</h3>
+          <p>
+            Testarea manuală implică utilizarea directă a site-ului tău cu
+            echipamente de asistență și metode de navigare pe care le folosesc
+            persoanele cu dizabilități.
+          </p>
+          <ol>
+            <li>
+              <strong>Navigare cu tastatura:</strong> Folosește TAB și SHIFT+TAB
+              pentru a verifica ordinea focusului.
+            </li>
+            <li>
+              <strong>Screen Readers:</strong> NVDA (gratuit), JAWS, sau
+              VoiceOver (Mac).
+            </li>
+            <li>
+              <strong>Zoom:</strong> Testează cu zoom la 200% și cu mod
+              întunecat.
+            </li>
+          </ol>
+          <p>
+            <a href="testare_manuala.html" style="color: var(--primary-color); font-weight: bold">
+              Afișează ghidul complet de testare manuală 
+              <span aria-hidden="true">→</span>
+            </a>
+          </p>
+        </div>
+
+        <div
+          id="panel-auto"
+          class="tab-panel"
+          role="tabpanel"
+          aria-labelledby="tab-auto"
+          aria-hidden="true"
+        >
+          <h3>Testare Automatizată</h3>
+          <p>
+            Instrumentele automate analizează codul și structura paginii pentru
+            a identifica probleme comune de accesibilitate. Sunt rapide și
+            utile, dar nu înlocuiesc testarea manuală.
+          </p>
+          <ol>
+            <li>
+              <strong>AXE DevTools:</strong> Extensie pentru Chrome/Firefox cu
+              rapoarte detaliate.
+            </li>
+            <li>
+              <strong>WAVE:</strong> WebAIM's tool pentru verificări vizuale și
+              rapoarte.
+            </li>
+            <li>
+              <strong>Lighthouse:</strong> Integrat în Chrome DevTools, include
+              audit accesibilitate.
+            </li>
+            <li>
+              <strong>Contrast Cheker:</strong> Un tool facut de echipa noastră
+              pentru verificarea contrastului
+            </li>
+          </ol>
+          <p>
+            Folosind aceste instrumente în combinație cu testarea manuală, vei
+            asigura că site-ul tău este cu adevărat accesibil pentru toți
+            utilizatorii.
+          </p>
+          <p>
+            <a href="testare_automata.html" style="color: var(--primary-color); font-weight: bold">
+              Afișează ghidul complet de testare automată 
+              <span aria-hidden="true">→</span>
+            </a>
+          </p>
+        </div>
+      </section>
+      <section class="newsletter-section">
+        <h2>Rămâi la curent cu noutățile A11y</h2>
+        <p>
+          Abonează-te pentru a primi sfaturi săptămânale despre design inclusiv.
+        </p>
+
+        <form class="newsletter-form">
+          <div class="form-group">
+            <label for="email-address">Adresa de e-mail:</label>
+            <input
+              type="email"
+              id="email-address"
+              name="email"
+              placeholder="exemplu@mail.ro"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-submit">Mă abonez</button>
+        </form>
+      </section>
+      <section>
+        <h2>Interacțiuni Accesibile</h2>
+        <p>
+          Un pop-up (modal) corect trebuie să poată fi controlat în totalitate
+          de la tastatură.
+        </p>
+
+        <button id="openModal" class="btn-submit">
+          Deschide Modalul Exemplar
+        </button>
+      </section>
+
+      <div id="modalOverlay" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+        <button id="closeModal" class="close-icon" aria-label="Închide fereastra">×</button>
+        
+        <h2 id="modalTitle">Setări Notificări</h2>
+        <p>Alege ce tip de noutăți dorești să primești:</p>
+
+        <fieldset style="border: 1px solid #ccc; padding: 20px; border-radius: 8px; text-align: left; margin: 20px 0;">
+            <legend style="padding: 0 10px; font-weight: bold; color: var(--primary-color);">Preferințe:</legend>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="news" name="news">
+                <label for="news">Noutăți săptămânale</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="events" name="events">
+                <label for="events">Evenimente A11y</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="offers" name="offers">
+                <label for="offers">Oferte parteneri</label>
+            </div>
+        </fieldset>
+
+        <button class="btn-submit" style="width: 100%;">Salvează setările</button>
+    </div>
+</div>
+      </div>
+      <section>
+        <h2>Ai întrebări?</h2>
+        <p>
+          Dacă ai întrebări, lasă-ne un mesaj prin formularul de contact.
+        </p>
+
+        <a href="contact.html" class="btn-submit" style="display: inline-block; text-decoration: none; text-align: center;">
+          Contactează-ne
+          <span aria-hidden="true">→</span>
+        </a>
+      </section>
+    </main>
+
+   <footer>
+    <div class="footer-container" role="contentinfo">
+        <span class="footer-info">
+            <span aria-hidden="true">&copy;</span> 2026 - Proiect de conștientizare A11y.
+        </span>
+
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+    </div>
+</footer>
+  </body>
+
+  <script src="js/accesibil.js"></script>
+</html>

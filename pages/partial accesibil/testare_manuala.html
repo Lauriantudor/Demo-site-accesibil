@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu Partial Inaccesibil</title>
+    <link rel="stylesheet" href="css/partial-inaccesibil.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><strong>A11y Pro -MOD DEFECT</strong></div>
+      <nav>
+        <ul>
+          <li><a href="partial-inaccesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">
+              Resurse
+              <span>▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main" id="main-content">
+      <div class="titlu-pagina">
+        <h1>Ghid Complet de Testare Manuală</h1>
+        <p class="intro">
+          Accesibilitatea nu este doar despre cod, ci despre experiența umană.
+          Urmați acești pași pentru a valida site-ul.
+        </p>
+      </div>
+
+      <section class="ghid-section">
+        <h2 id="keyboard-title">1. Navigare cu Tastatura</h2>
+        <p>
+          Esențială pentru utilizatorii cu deficiențe motorii sau nevăzători.
+        </p>
+        <ol>
+          <li>
+            <strong>Ordinea Focusului:</strong> Folosește <code>TAB</code> și
+            <code>SHIFT + TAB</code>. Focusul trebuie să urmeze ordinea vizuală
+            a elementelor.
+          </li>
+          <li>
+            <strong>Focus Vizibil:</strong> Elementul selectat trebuie să aibă
+            un contur clar (ex: albastru sau portocaliu).
+          </li>
+          <li>
+            <strong>Activare:</strong> Toate butoanele și link-urile trebuie să
+            poată fi activate cu tastele <code>Enter</code> sau
+            <code>Space</code>.
+          </li>
+        </ol>
+      </section>
+
+      <section class="ghid-section">
+        <h2 id="sr-title">2. Screen Readers (Cititoare de Ecran)</h2>
+        <p>Software-uri care transformă codul în voce sau Braille.</p>
+        <div class="sr-tools">
+          <p>
+            <strong>Unelte recomandate:</strong> NVDA (Windows - gratuit), JAWS
+            (Windows), sau VoiceOver (Mac/iOS).
+          </p>
+        </div>
+        <ol>
+          <li>
+            <strong>Alt Text:</strong> Imaginile informative trebuie să aibă
+            descrieri. Cele decorative trebuie ascunse (<code>alt=""</code>).
+          </li>
+          <li>
+            <strong>Semantici:</strong> Folosește corect tag-urile
+            <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+            <code>&lt;main&gt;</code> și <code>&lt;footer&gt;</code>.
+          </li>
+          <li>
+            <strong>Etichete (Labels):</strong> Toate câmpurile de formular
+            trebuie să aibă un label explicit.
+          </li>
+        </ol>
+      </section>
+
+      <section class="ghid-section">
+        <h2 id="zoom-title">3. Zoom și Redimensionare</h2>
+        <p>Testarea pentru utilizatorii cu vedere slabă.</p>
+        <ol>
+          <li>
+            <strong>Regula 200%:</strong> Conținutul trebuie să fie lizibil la
+            zoom de 200% fără a pierde funcționalitate.
+          </li>
+          <li>
+            <strong>Reflow:</strong> Evită scroll-ul orizontal pe tot ecranul.
+            Textul trebuie să se rearanjeze vertical.
+          </li>
+          <li>
+            <strong>Contrast:</strong> Raport minim de 4.5:1 pentru text normal
+            față de fundal.
+          </li>
+        </ol>
+      </section>
+    </div>
+
+    <div class="footer">
+      <div class="footer-container" role="contentinfo">
+        <span class="footer-info">
+          <span>&copy;</span> 2026 - Proiect de conștientizare A11y.
+        </span>
+
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+      </div>
+    </div>
+  </body>
+
+  <script src="js/partial-inaccesibil.js"></script>
+</html>

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplu  Complect Inaccesibil</title>
+    <link rel="stylesheet" href="css/complect-inaccesibil.css?v=2" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo"><strong>A11y Pro - MOD DEFECT</strong></div>
+      <nav>
+        <ul>
+          <li><a href="complect-inaccesibil.html">Acasă</a></li>
+          <li class="dropdown">
+            <button class="dropbtn">
+              Resurse
+              <span>▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="faq.html">Întrebări fregvente</a>
+              <a href="testare_automata.html">Ghid pentru testare automata</a>
+              <a href="testare_manuala.html">Ghid pentru testare manuala</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="main" id="main-content">
+      <div class="titlu-pagina-fundal">
+        <h1>Întrebări Frecvente despre Accesibilitate</h1>
+        <p class="intro">
+          Aflați răspunsurile la cele mai comune curiozități legate de
+          standardele WCAG și implementarea A11y.
+        </p>
+      </div>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Ce înseamnă mai exact "A11y"? <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              A11y este un numeronym pentru cuvântul "Accessibility". Cifra 11
+              reprezintă numărul de litere dintre prima literă (A) și ultima
+              literă (y).
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Cine beneficiază de un site accesibil?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Toată lumea! Deși este vital pentru persoanele cu dizabilități
+              vizuale, un site accesibil este mai ușor de folosit pentru toți.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Este accesibilitatea obligatorie prin lege?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Da, în Uniunea Europeană, Directiva privind accesibilitatea web
+              impune standarde stricte pentru instituții și companii.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Ce este contrastul de culoare minim recomandat?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Conform WCAG 2.1 AA, raportul de contrast trebuie să fie de cel
+              puțin 4.5:1 pentru textul normal și 3:1 pentru textul mare.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Pot automatiza complet testarea accesibilității?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Nu. Uneltele automate pot detecta doar aproximativ 30-40% din
+              probleme. Testarea manuală este indispensabilă.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            De ce nu este bine să folosim "Click aici"?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Utilizatorii de cititoare de ecran navighează adesea folosind o
+              listă de link-uri. "Click aici" nu oferă niciun context.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Ce este textul alternativ (Alt Text)? <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Este o descriere textuală a unei imagini, citită de software
+              pentru a explica utilizatorului ce reprezintă imaginea.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Cum ajută structura de titluri (H1-H6)?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Titlurile corecte creează o hartă a paginii, permițând
+              utilizatorilor să sară rapid de la o secțiune la alta.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Ce este un "Skip Link"? <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Este un link ascuns vizual care permite utilizatorului să sară
+              peste meniul de navigare direct la conținut.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Accesibilitatea strică designul site-ului?
+            <span class="icon">+</span>
+          </button>
+          <div class="faq-answer visually-hidden-sabotage">
+            <p>
+              Absolut nu. Un design accesibil este un design curat, logic și
+              modern. Cele două merg mână în mână.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <dic class="footer">
+      <div class="footer-container" role="contentinfo">
+        <span class="footer-info">
+          <span>&copy;</span> 2026 - Proiect de conștientizare A11y.
+        </span>
+
+        <a href="../../index.html" class="footer-link">Înapoi la start</a>
+      </div>
+    </div>
+    <script src="js/complect-inaccesibil.js"></script>
+  </body>
+</html>
